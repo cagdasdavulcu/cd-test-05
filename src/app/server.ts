@@ -59,8 +59,12 @@ app.use("/", Express.static(path.join(__dirname, "web/"), {
 app.set("port", port);
 
 // Start the webserver
-const server = http.createServer(app).listen(port, () => {
-    log(`Server running on ${port}`);
-});
+const server = http.createServer(app);
+
+if (`${process.env.NODE_ENV}` !== "test") {
+    server.listen(port, () => {
+        log(`Server running on ${port}`);
+    });
+}
 
 export { app, server };

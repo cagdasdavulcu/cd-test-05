@@ -6,7 +6,7 @@
     "start": "node dist/server.js",
     "build": "gulp build",
     "debug": "gulp serve --debug",
-    "test": "jest",
+    "test": "set NODE_ENV=test&& jest",
     "coverage": "jest --coverage"
   },
   "dependencies": {

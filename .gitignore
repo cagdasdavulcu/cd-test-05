@@ -9,3 +9,6 @@ package
 
 # do not include the Connectors Json Db file
 connectors.json
+
+dist/
+!bower_components/**/dist/

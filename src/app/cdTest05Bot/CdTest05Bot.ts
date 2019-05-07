@@ -40,8 +40,8 @@ export class CdTest05Bot implements IBot {
 
         this.conversationState = conversationState;
         this.dialogState = conversationState.createProperty("dialogState");
-        this.dialogs = new DialogSet(this.dialogState);
-        this.dialogs.add(new HelpDialog("help"));
+        // this.dialogs = new DialogSet(this.dialogState);
+        // this.dialogs.add(new HelpDialog("help"));
 
         // Set up the Activity processing
 
@@ -62,8 +62,8 @@ export class CdTest05Bot implements IBot {
                             await context.sendActivity("Oh, hello to you as well!");
                             return;
                         } else if (text.startsWith("help")) {
-                            const dc = await this.dialogs.createContext(context);
-                            await dc.beginDialog("help");
+                            //const dc = await this.dialogs.createContext(context);
+                            //await dc.beginDialog("help");
                         } else {
                             await context.sendActivity(`I\'m terribly sorry, but my master hasn\'t trained me to do anything yet...`);
                         }

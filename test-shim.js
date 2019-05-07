@@ -1,3 +1,5 @@
+window.global = window;
+
 /**
  * Get rids of the missing requestAnimationFrame polyfill warning.
  * 
